@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Mobail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h2>⭐ STAR MOBAIL</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Welcome to Star Mobail</h1>
+    <p>Everything your mobile needs!</p>
+    <a href="#products" class="btn">Explore Products</a>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+
+    <div class="product-container">
+      <div class="product">
+        <img src="images/mobile-covers.svg" alt="Mobile Covers">
+        <h3>Mobile Covers</h3>
+        <p>Different styles and designs.</p>
+        <button onclick="order('Mobile Covers')">
+          Enquire on WhatsApp
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="images/audio-wearables.svg" alt="Earphones">
+        <h3>Earphones & Neckbands</h3>
+        <p>Audio accessories for everyday use.</p>
+        <button onclick="order('Earphones and Neckbands')">
+          Enquire on WhatsApp
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="images/shop-display.svg" alt="Smart Watches">
+        <h3>Smart Watches</h3>
+        <p>Explore wearable accessories.</p>
+        <button onclick="order('Smart Watches')">
+          Enquire on WhatsApp
+        </button>
+      </div>
+
+      <div class="product">
+        <img src="images/accessories-display.svg" alt="Accessories">
+        <h3>Mobile Accessories</h3>
+        <p>Useful accessories for your phone.</p>
+        <button onclick="order('Mobile Accessories')">
+          Enquire on WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <h3>Star Mobail</h3>
+    <p>Geedam, Dantewada, Chhattisgarh, India</p>
+    <p>Contact us for product details and orders.</p>
+    <button onclick="order('Store enquiry')">
+      WhatsApp Us
+    </button>
+  </section>
+
+  <footer>
+    <p>© 2026 Star Mobail. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Replace with the shop's WhatsApp number, including 91.
+    const whatsappNumber = "91XXXXXXXXXX";
+
+    function order(product) {
+      if (whatsappNumber.includes("X")) {
+        alert("Please add the shop WhatsApp number in the HTML code.");
+        return;
+      }
+
+      const message = "Hello Star Mobail! I want to enquire about " + product;
+      window.open(
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+    }
+  </script>
+
+</body>
+</html>
